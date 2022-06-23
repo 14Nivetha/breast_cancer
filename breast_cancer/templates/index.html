@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Breast Cancer Prediction</title>
+</head>
+<body>
+    <hr><h1>Breast Cancer Prediction</h1><hr>
+    <div class="container-i">
+        <form action = "{{url_for('classify')}}" class="form-i" method="post">
+        <h4>radius_mean:<input type="text"name="radius_mean"placeholder="Enter the radius_mean:" required="required"></h4>   
+        <h4> perimeter_mean:<input type="text" name="perimeter_mean" placeholder="Enter the perimeter_mean:" required="required"></h4>  
+        <h4> area_mean:<input type="text" name="area_mean" placeholder="Enter the area_mean:" required="required"></h4>
+        <h4>compactness_mean:<input type="text" name="compactness_mean" placeholder="Enter the compactness_mean:" required="required"></h4> 
+        <h4>concavity_mean:<input type="text" name="concavity_mean" placeholder="Enter the concavity_mean:" required="required"></h4>
+        <h4>concave points_mean:<input type="text" name="concave_points_mean" placeholder="Enter the concave points_mean:" required="required"></h4>
+        <h4>radius_se:<input type="text" name="radius_se" placeholder="Enter the radius_se:" required="required"></h4>
+        <h4>perimeter_se:<input type="text" name="perimeter_se" placeholder="Enter the perimeter_se:" required="required"></h4>
+        <h4>area_se:<input type="text" name="area_se" placeholder="Enter the area_se:" required="required"></h4>
+        <h4>compactness_se:<input type="text" name="compactness_se" placeholder="Enter the compactness_se:" required="required"></h4>
+        <h4>concavity_se:<input type="text" name="concavity_se" placeholder="Enter the concavity_se:" required="required"></h4>
+        <h4>concave_points_se:<input type="text" name="concave_points_se" placeholder="Enter the concave points_se:" required="required"></h4>
+        <h4>fractal_dimension_se:<input type="text" name="fractal_dimension_se" placeholder="Enter the fractal_dimension_se:'," required="required"></h4>
+        <h4>radius_worst:<input type="text" name="radius_worst" placeholder="Enter the radius_worst:" required="required"></h4>
+        <h4>texture_worst:<input type="text" name="texture_worst" placeholder="Enter the texture_worst:" required="required"></h4>
+        <h4>perimeter_worst:<input type="text" name="perimeter_worst" placeholder="Enter the perimeter_worst:" required="required"></h4>
+        <h4>area_worst:<input type="text" name="area_worst" placeholder="Enter the area_worst:" required="required"></h4>
+        <h4>concavity_worst:<input type="text" name="concavity_worst" placeholder="Enter the concavity_worst:" required="required"></h4>
+        <h4>concave_points_worst:<input type="text" name="concave_points_worst" placeholder="Enter the concave_points_worst:" required="required"></h4>
+            
+            
+         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br><br>
+          
+        
+          
+        </form>
+        <h2>Patient Result was : {{cl_out}}</h2>
+    </div>
+    <style>
+        body
+            {
+                text-align: center;
+                color: rgb(248, 248, 244);
+                background-repeat: no-repeat;
+                background-image: url('../static/Cancer-Cells.jpeg');
+                background-size: cover;
+               font-size: medium;
+               font-style: inherit;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+    </style>
+</body>
+</html>
+
+
+
+
+
